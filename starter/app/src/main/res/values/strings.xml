@@ -9,6 +9,6 @@
     <string name="next">Continue</string>
     <string name="instruction_title">Instruction Title</string>
     <string name="instruction_detail">Instruction Detail</string>
-    <string name="show_shoe_list">Show Shoe List</string>
+    <string name="show_shoe_list">Continue to Shoe List</string>
 
 </resources>
