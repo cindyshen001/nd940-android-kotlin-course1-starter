@@ -2,7 +2,6 @@ package com.udacity.shoestore.shoelist
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,6 +45,7 @@ class ShoeListViewAdapter(private val context: Context?, private val data: List<
             DataBindingUtil.inflate(layoutInflater!!, R.layout.shoe_list_item, parentView, false)
         binding.shoeName = data[position].name
         binding.shoeSize = data[position].size.toString()
+        binding.shoeCompany = data[position].company
 
         return binding.root
     }

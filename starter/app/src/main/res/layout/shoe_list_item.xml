@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -11,6 +10,10 @@
 
         <variable
             name="shoeSize"
+            type="String" />
+        
+        <variable
+            name="shoeCompany"
             type="String" />
     </data>
 
@@ -26,12 +29,11 @@
 
             <TextView
                 android:id="@+id/lblShoeName"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="@{shoeName}"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                android:textStyle="bold"
+                android:text="@{shoeName}" />
         </LinearLayout>
 
         <LinearLayout
@@ -40,14 +42,18 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/lblShoeDesc"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:id="@+id/lblShoeCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="@{shoeSize}"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                android:text="@{shoeCompany}" />
 
+            <TextView
+                android:id="@+id/lblShoeDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{shoeSize}" />
         </LinearLayout>
     </LinearLayout>
 </layout>
