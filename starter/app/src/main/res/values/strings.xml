@@ -10,5 +10,11 @@
     <string name="instruction_title">Instruction Title</string>
     <string name="instruction_detail">Instruction Detail</string>
     <string name="show_shoe_list">Continue to Shoe List</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
 
 </resources>

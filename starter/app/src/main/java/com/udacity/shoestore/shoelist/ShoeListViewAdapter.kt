@@ -24,7 +24,7 @@ class ShoeListViewAdapter(private val context: Context?, private val data: List<
     }
 
     override fun getItem(position: Int): Any {
-        return position
+        return data[position]
     }
 
     override fun getItemId(position: Int): Long {
