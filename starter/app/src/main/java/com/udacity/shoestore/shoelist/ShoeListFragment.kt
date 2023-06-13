@@ -32,9 +32,8 @@ class ShoeListFragment : Fragment() {
         val viewModel = ViewModelProvider(this)[ShoeListViewModel::class.java]
         binding.listViewShoes.adapter = ShoeListViewAdapter(this.context, viewModel.shoes.value!!)
         binding.listViewShoes.setOnItemClickListener{adapter, view, position, id ->
-            val shoe = adapter.getItemAtPosition(position) as Shoe
-            Timber.i("Clicked $shoe")
-            findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
+            Timber.i("Clicked position $position")
+            findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment(position))
         }
 
         return binding.root

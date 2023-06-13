@@ -2,7 +2,25 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".shoedetail.ShoeDetailFragment">
+    tools:context=".sheodetail.ShoeDetailFragment">
+
+    <data>
+        <variable
+            name="shoeName"
+            type="String" />
+
+        <variable
+            name="shoeSize"
+            type="String" />
+
+        <variable
+            name="shoeCompany"
+            type="String" />
+
+        <variable
+            name="shoeDesc"
+            type="String" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -50,6 +68,7 @@
             android:accessibilityLiveRegion="polite"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="@{shoeName}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/lblShoeName"
             app:layout_constraintTop_toTopOf="parent"
@@ -64,6 +83,7 @@
             android:accessibilityLiveRegion="polite"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="@{shoeCompany}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.582"
@@ -80,6 +100,7 @@
             android:accessibilityLiveRegion="polite"
             android:ems="10"
             android:inputType="numberDecimal"
+            android:text="@{shoeSize}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/lblShoeSize"
             app:layout_constraintTop_toBottomOf="@+id/edtShoeCompany"
@@ -94,6 +115,7 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
+            android:text="@{shoeDesc}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/lblShoeDesc"
             app:layout_constraintTop_toBottomOf="@+id/edtShoeSize"
