@@ -31,11 +31,30 @@ class ShoeListFragment : Fragment() {
         binding.lifecycleOwner = this
         val viewModel = ViewModelProvider(this)[ShoeListViewModel::class.java]
         binding.listViewShoes.adapter = ShoeListViewAdapter(this.context, viewModel.shoes.value!!)
-        binding.listViewShoes.setOnItemClickListener{adapter, view, position, id ->
+        binding.listViewShoes.setOnItemClickListener { adapter, view, position, id ->
             Timber.i("Clicked position $position")
-            findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment(position))
+            findNavController().navigate(
+                ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment(
+                    position
+                )
+            )
+        }
+
+        binding.floatingActionButton.setOnClickListener {
+            Timber.i("add new shoe btn clicked.")
+            findNavController().navigate(
+                ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment(
+                    -1
+                )
+            )
         }
 
         return binding.root
+    }
+
+    override fun onResume() {
+        Timber.i("onResume")
+
+        super.onResume()
     }
 }
